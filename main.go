@@ -37,7 +37,7 @@ func main() {
 
 func registerRoutes(router *mux.Router) {
 	router.HandleFunc("/", handlers.Index)
-	router.HandleFunc("/privacy", handlers.Priacy)
+	router.HandleFunc("/privacy", handlers.Privacy)
 
 	router.HandleFunc("/auth/login", handlers.ViewLogin)
 	router.HandleFunc("/auth/register", handlers.ViewRegister)

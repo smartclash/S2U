@@ -17,7 +17,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func Priacy(w http.ResponseWriter, r *http.Request) {
+func Privacy(w http.ResponseWriter, r *http.Request) {
 	message := &Basic{"Privacy policy page here"}
 	if err := json.NewEncoder(w).Encode(message); err != nil {
 		_, _ = fmt.Fprint(w, "Unknown error occurred")
