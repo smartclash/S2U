@@ -6,8 +6,8 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
-	"github.com/smartclash/S2U/database"
-	"github.com/smartclash/S2U/handlers"
+	"github.com/miroclash/S2U/database"
+	"github.com/miroclash/S2U/handlers"
 )
 
 func main() {
@@ -37,4 +37,12 @@ func main() {
 
 func registerRoutes(router *mux.Router) {
 	router.HandleFunc("/", handlers.Index)
+	router.HandleFunc("/privacy", handlers.Priacy)
+
+	router.HandleFunc("/auth/login", handlers.ViewLogin)
+	router.HandleFunc("/auth/register", handlers.ViewRegister)
+
+	router.HandleFunc("/user/dashboard", handlers.UserDashboard)
+	router.HandleFunc("/user/{id}", handlers.UserProfile)
+	router.HandleFunc("/link/create", handlers.ViewCreateLink)
 }

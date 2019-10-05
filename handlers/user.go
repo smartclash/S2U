@@ -6,19 +6,15 @@ import (
 	"net/http"
 )
 
-type Basic struct {
-	Message string `json:"message"`
-}
-
-func Index(w http.ResponseWriter, r *http.Request) {
-	message := &Basic{Message: "Hello World"}
+func UserDashboard(w http.ResponseWriter, r *http.Request) {
+	message := &Basic{Message: "[GET] User dashboard here"}
 	if err := json.NewEncoder(w).Encode(message); err != nil {
 		_, _ = fmt.Fprint(w, "Unknown error occurred")
 	}
 }
 
-func Priacy(w http.ResponseWriter, r *http.Request) {
-	message := &Basic{"Privacy policy page here"}
+func UserProfile(w http.ResponseWriter, r *http.Request) {
+	message := &Basic{Message: "[GET] User profile page here"}
 	if err := json.NewEncoder(w).Encode(message); err != nil {
 		_, _ = fmt.Fprint(w, "Unknown error occurred")
 	}
