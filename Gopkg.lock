@@ -36,18 +36,6 @@
   revision = "b612a2feea6aa87c6d052d9086572551df06497e"
   version = "v1.11.0"
 
-[[projects]]
-  branch = "master"
-  digest = "1:658de22c217c6cf94007448c7b0a1136942f8c29e9a62836ec805bb34755d0d9"
-  name = "github.com/miroclash/S2U"
-  packages = [
-    "database",
-    "database/models",
-    "handlers",
-  ]
-  pruneopts = "UT"
-  revision = "1d8801b972ab051ca09de9fae3b3f870f70f7b45"
-
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
@@ -55,9 +43,6 @@
     "github.com/gorilla/mux",
     "github.com/jinzhu/gorm",
     "github.com/jinzhu/gorm/dialects/sqlite",
-    "github.com/miroclash/S2U/database",
-    "github.com/miroclash/S2U/database/models",
-    "github.com/miroclash/S2U/handlers",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
