@@ -38,14 +38,15 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:9d5b5d543996dd584da1db1e0de1926f3e4c3a8dba0fa2f8db70f3ebee2342e0"
-  name = "golang.org/x/crypto"
+  digest = "1:658de22c217c6cf94007448c7b0a1136942f8c29e9a62836ec805bb34755d0d9"
+  name = "github.com/miroclash/S2U"
   packages = [
-    "bcrypt",
-    "blowfish",
+    "database",
+    "database/models",
+    "handlers",
   ]
   pruneopts = "UT"
-  revision = "f9e2070545dcd4128a854a97ddf10fbfc3c4b6e4"
+  revision = "1d8801b972ab051ca09de9fae3b3f870f70f7b45"
 
 [solve-meta]
   analyzer-name = "dep"
@@ -54,7 +55,9 @@
     "github.com/gorilla/mux",
     "github.com/jinzhu/gorm",
     "github.com/jinzhu/gorm/dialects/sqlite",
-    "golang.org/x/crypto/bcrypt",
+    "github.com/miroclash/S2U/database",
+    "github.com/miroclash/S2U/database/models",
+    "github.com/miroclash/S2U/handlers",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
